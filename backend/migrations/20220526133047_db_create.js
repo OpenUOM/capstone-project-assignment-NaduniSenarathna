@@ -5,7 +5,7 @@ exports.up = function (knex) {
         table.string("name", 255);
         table.int("age");
       })
-      .createTable("students", function (table) {
+      .createTable("student", function (table) {
         table.increments("id").notNullable().primary();
         table.string("name", 255);
         table.int("age");
