@@ -5,7 +5,7 @@ exports.up = function (knex) {
         table.string("name", 255);
         table.int("age");
       })
-      .createTable("student", function (table) {
+      .createTable("students", function (table) {
         table.increments("id").notNullable().primary();
         table.string("name", 255);
         table.int("age");
@@ -21,7 +21,7 @@ exports.up = function (knex) {
   exports.down = function (knex) {
     return knex.schema
       .dropTable("teacher")
-      .dropTable("student")
+      .dropTable("students")
       .dropTable("dummyData")
   };
   
